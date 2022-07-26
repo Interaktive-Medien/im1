@@ -1,0 +1,26 @@
+viewport erwähnen
+
+Flexbox youtube Video erwähnen
+
+____________Schritt 2______________________
+Zeigen dass man mehrere male die zwei Blau töne benutzen wird
+:root {
+  /*--blue: var(--blue);*/
+  --blue: rgba(13,40,128,1);
+  --blue_low_opacity: rgba(13,40,128,0.8);
+}
+
+Zeigen das man einen bestimmten Font benutzen wird.
+Ausserdem möchte man keine text-docoration nutzen. z.b bei Links
+*{
+  font-family:"Montserrat", sans-serif;
+  font-weight:500;
+  font-size:16px;
+  color:grey;
+
+  text-decoration:none; 
+}
+
+Präsentieren wie der font aussieht
+
+Auf die verschiedenen selektoren eingehen, fragen was wäre die Alternative

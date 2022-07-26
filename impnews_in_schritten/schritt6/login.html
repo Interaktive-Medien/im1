@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IMP News</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">
+        <a href="index.html"><img class="logo" src="img/logo_dunkel_blau.PNG"  alt="Logo IMP News"></a>
+      </div>
+      <div>
+        <!--<a class="cta" href="login.html"><button>Anmelden</button></a>-->
+        <a href="login.html">
+          <img src="img/benutzerbild.svg" width="45px" height="45px">
+        </a><!--analysieren-->
+      </div>
+    </header>
+
+    <nav>
+      <ul class="nav_links">
+        <li><a class="aktiver_menuelink" href="index.html">Übersicht</a></li>
+        <li><a href="#">Aktuelles</a></li>
+        <li><a href="#">Veranstaltungen</a></li>
+        <li><a  href="#">Projekte</a></li>
+        <li><a href="#">Freizeit</a></li>
+        <li><a href="#">Welt</a></li>
+        <li><a href="#">Interessant</a></li>
+        <li><a href="#">Kunst</a></li>
+        <li><a href="#">Gut zu wissen</a></li>
+        <li><a  href="#">Brambrüesch</a></li>
+        <li><a href="#">Calanda</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="login_form">
+        <!-- inspired by https://www.w3schools.com/howto/howto_css_login_form.asp, https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form -->
+
+        <form action="/action_page.php" method="post">
+          <div class="container_benutzerbild">
+            <!--https://freeicons.io/benutzerbilds-2/benutzerbild-icon-44136-->
+            <!--<img src="img/avatar2.svg" alt="Avatar" class="avatar">-->
+            <img src="img/benutzerbild.svg" width="250px" height="250px">
+          </div>
+
+          <div class="container">
+            <label for="uname">Username</label>
+            <input type="text" placeholder="Bitte Username eingeben" name="uname" id="uname" required>
+
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Bitte Password eingeben" name="psw" id="psw" required>
+
+            <button type="submit">Anmelden</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Angemeldet bleiben
+            </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Abbrechen</button>
+            <span class="psw"><a href="#">Password vergessen?</a></span>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      IMPNEWS GmbH<br>
+      <a href="mailto:info@impnews.ch" style="color:white">info@impnews.ch</a><br>
+      Tel. +41851234567
+    </footer>
+
+  </body>
+</html>

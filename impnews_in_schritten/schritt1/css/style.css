@@ -1,0 +1,8 @@
+header{
+    display:flex;
+    align-items: center;
+  }
+  
+.logo{
+    flex:1; /*https://www.youtube.com/watch?v=k32voqQhODc*/
+}

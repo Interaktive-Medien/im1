@@ -1,0 +1,48 @@
+:root {
+  /*--blue: var(--blue);*/
+  --blue: rgba(13,40,128,1);
+  --blue_low_opacity: rgba(13,40,128,0.8);
+}
+
+*{
+  font-family:"Montserrat", sans-serif;
+  font-weight:500;
+  font-size:16px;
+  color:grey;
+
+  text-decoration:none;
+}
+
+header{
+    display:flex;
+    align-items: center;
+  }
+  
+.logo{
+    flex:1; /*https://www.youtube.com/watch?v=k32voqQhODc*/
+}
+
+.nav_links{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style:none;
+  padding: 0;
+
+  margin:0px;
+}
+
+.nav_links li a{
+  display: block;
+  box-sizing:border-box;
+  height:40px;
+  padding: 10px 15px 0px 15px;
+}
+
+
+.nav_links li a:hover, .aktiver_menuelink{
+  color:var(--blue);
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: var(--blue);
+}

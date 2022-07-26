@@ -1,0 +1,46 @@
+viewport erwähnen
+
+Flexbox Youtube Video erwähnen
+
+____________Schritt 2______________________
+Zeigen dass man mehrere male die zwei blauem töne benutzen wird
+:root {
+  /*--blue: var(--blue);*/
+  --blue: rgba(13,40,128,1);
+  --blue_low_opacity: rgba(13,40,128,0.8);
+}
+
+Zeigen das man einen bestimmten Font benutzen wird.
+Ausserdem möchte man keine text-docoration nutzen. z.b bei Links
+*{
+  font-family:"Montserrat", sans-serif;
+  font-weight:500;
+  font-size:16px;
+  color:grey;
+
+  text-decoration:none; 
+}
+
+Präsentieren wie der Font aussieht
+
+Auf die verschiedenen selektoren eingehen, fragen was wäre die Alternative
+
+____________Schritt 3______________________
+position:relative wurde ausgelassen (auskomentiert hier)
+das kommt erst im schritt 4
+
+____________Schritt 4______________________
+Wenn man nur die Überschriften dazugibt ohne css sind sie versteckt
+darauf hinweissen
+Z.B wenn man height der bilder auf 80% setzt dann sind die Überschriften sichtbar
+
+Nachdem die css für h2, Marker, Minimarker usw dazugegeben sind, sind alle Überschriften
+aufeinander "geklebt"
+Damitt man das repariert muss man position:relative dazugeben in die nachrichten css
+
+____________Schritt 5______________________
+Erwähnen das man nicht ganz genau sein muss, z.B. mit prozenten 32%
+Erwähnen das ich einen reset mache der höhe (height:auto)
+Grid definition von Bereichen mit einem Bild erklären z.b. grid-row:2/4;
+z.b mit https://www.w3schools.com/css/css_grid.asp
+

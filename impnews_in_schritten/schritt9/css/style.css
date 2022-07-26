@@ -1,0 +1,341 @@
+:root {
+  /*--blue: var(--blue);*/
+  --blue: rgba(13,40,128,1);
+  --blue_low_opacity: rgba(13,40,128,0.8);
+}
+
+*{
+  font-family:"Montserrat", sans-serif;
+  font-weight:500;
+  font-size:16px;
+  color:grey;
+
+  text-decoration:none;
+}
+
+header{
+    display:flex;
+    align-items: center;
+  }
+  
+.logo{
+    flex:1; /*https://www.youtube.com/watch?v=k32voqQhODc*/
+}
+
+.nav_links{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style:none;
+  padding: 0;
+
+  margin:0px;
+}
+
+.nav_links li a{
+  display: block;
+  box-sizing:border-box;
+  height:40px;
+  padding: 10px 15px 0px 15px;
+}
+
+
+.nav_links li a:hover, .aktiver_menuelink{
+  color:var(--blue);
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: var(--blue);
+}
+
+.grosse_nachricht, .kleine_nachricht, .grosse_nachricht_vertikal{
+  box-sizing:border-box;
+  height:70vw;
+
+  margin-bottom:10px; /*only for smartphone, this will be canceled above 1000px width*/
+  /*Deleted for grid, is solved with grid-column-gap:10px; grid-row-gap:10px;*/
+  /*margin-right:5px;
+  margin-left:5px;*/
+  
+  position: relative;
+}
+
+.nachrichtenbild_titelseite{
+  object-fit:cover;
+  width:100%;
+  height:100%;
+}
+
+/*usage of h2 us forced throuhg validation tool but h2 has some margins that have to be canceled*/
+.grosse_nachricht h2, .kleine_nachricht h2, .grosse_nachricht_vertikal h2{/*added .big_article_vertical h2 for grid*/
+  margin:5px 0 10px 0;
+}
+
+.marker, .mini_marker{
+  background-color:var(--blue_low_opacity);
+  color:white;
+  margin-bottom:10px;
+  padding:3px;
+
+  line-height:150%;
+}
+
+.marker{
+  font-size: 22px;
+}
+
+.mini_marker{
+  background-color: #00004d;
+}
+
+.zwei_ueberschriften{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+footer {
+  /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_footer*/
+   /*position: fixed;
+   left: 0;
+   bottom: 0;*/
+   width: 100%;
+   background-color: var(--blue);
+   color: white;
+   text-align: center;
+
+   padding-top:10px;
+   padding-bottom:10px;
+   margin-top:10px;
+}
+
+/*_______________________Login Form_____________________*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form*/
+.login_form form {
+  border: 3px solid #f1f1f1;
+}
+
+.login_form input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+
+  border-width:0px 0px 1px 0px;
+  border-style:solid;
+  border-color:var(--blue);
+
+  box-sizing: border-box;
+}
+
+.login_form input:focus{
+    outline: none;/*Damit kein orangener Rahmen angezeigt wird beim anclicken*/
+}
+
+.login_form button {
+  background-color: var(--blue);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+  border-radius:3px;
+}
+
+/*for both buttons in form*/
+.login_form button:hover {
+  opacity: 0.8;
+}
+
+.login_form .cancelbtn {
+  width: auto;/*Zuerucksetzen auf Standardwert*/
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.login_form .container_benutzerbild {
+  text-align: center;/*https://www.freecodecamp.org/news/how-to-center-an-image-in-css/*/
+  margin: 0 0 -50px 0; /*0 is short form of "0 every_unit"*/
+}
+
+.login_form .container {
+  padding: 16px;
+}
+
+.login_form span.psw {/*Passwort fergessen? Text*/
+  float: right;
+  padding-top: 16px;
+}
+
+
+form label{
+  color:var(--blue);
+  font-weight: bold;
+}
+/*_______________________Ende Login Form_____________________*/
+
+
+/*_______________________Einzelne Nachricht_____________________*/
+.container_einzelner_nachricht {
+  border: 3px solid #f1f1f1;
+  padding:10px;
+  margin-top:10px;
+}
+
+.datum_einzelner_nachricht{
+  text-align: right;
+  font-size:13px;
+}
+
+.titel_einzelner_nachricht{
+  font-size:30px;
+  color:var(--blue);
+  margin-top:10px;
+}
+
+.bild_einzelner_nachricht{
+  height:50vw;
+  margin-top:10px;
+}
+
+.bild_einzelner_nachricht img{
+  object-fit:cover;
+  width:100%;
+  height:100%;
+}
+
+.inhalt_einzelner_nachricht{
+  margin-top:10px;
+}
+
+.horizontales_banner{
+  height:30vw;
+}
+
+.horizontales_banner img{
+  object-fit:cover;
+  width:100%;
+  height:100%;
+}
+
+
+.rechtes_banner{
+  display:none;
+}
+
+/*_______________________Ende einzelne Nachricht_____________________*/
+
+/*_______________________Anfang sticky_______________________________*/
+nav{
+  position: sticky;
+  top: 0;
+  background-color: white;/*important because of sticky*/
+
+  padding-bottom:10px;/*because when sticky some margin is needed*/
+
+  z-index: 100;
+}
+
+.rechtes_banner{
+  position: sticky;
+  top: 0;
+}
+
+/*footer{
+  position: sticky;
+  z-index:1000;
+}*/
+/*_______________________Ende sticky_______________________________*/
+
+
+@media (min-width: 1000px) {
+  .alle_nachrichten_uebersicht{
+    display:grid; /*https://www.youtube.com/watch?v=jV8B24rSN5o*/
+    
+    grid-template-columns: 49% 49%;
+    /*grid-template-columns: 400px 400px;*/
+
+    grid-auto-rows:50vw; /*https://youtu.be/jV8B24rSN5o?t=713*/
+    /*grid-auto-rows:400px;*/
+
+    grid-column-gap:10px;
+    grid-row-gap:10px;
+    /*grid-column-gap:1%;
+    grid-row-gap:1vw;*/
+
+    justify-content: center;/*Breite ist ungefähr 99 prozent, deshalb zentrieren wir alles*/
+  }
+
+  .grosse_nachricht, .kleine_nachricht, .grosse_nachricht_vertikal{
+    margin-bottom: 0px;
+  }
+
+  .grosse_nachricht{
+    height:auto;/*resetting height value from 70vw to default value*/
+    grid-column:1/3;
+  }
+
+  .kleine_nachricht{
+    height:auto;/*resetting height value from 70vw to default value*/
+  }
+
+  .grosse_nachricht_vertikal{
+    height:auto;/*resetting height value from 70vw to default value*/
+    grid-column:2;
+    grid-row:3/5;
+  }
+
+  /*_______________Login Form______________*/
+  .login_form form {
+    margin:auto;/*Zuerucksetzen auf Standardwert*/
+    width:800px;
+  }
+
+
+  /*_______________Einzelne Nachricht____________*/
+  .nachricht_und_rechter_banner_container{
+    display: flex;
+    justify-content:center;
+  }
+
+  .oberstes_banner_und_nachricht{
+    box-sizing: border-box;
+    width:750px;
+  }
+
+  .bild_einzelner_nachricht{
+    height:500px;
+  }
+
+  .rechtes_banner {
+    display:block;
+    width:200px;
+    height:500px;
+    margin-left:10px;
+
+    /*position: sticky;
+    top: 0;*/
+  }
+
+  .horizontales_banner{
+    height:200px;
+  }
+  /*_______________Ende einzelne Nachricht____________*/
+}
+
+@media (min-width: 1260px) {
+  .alle_nachrichten_uebersicht{
+    /*grid-template-columns: 400px 400px 400px;*/
+    /*grid-template-columns: 32.8% 32.8% 32.8%;*/
+    grid-template-columns: 32% 32% 32%;
+
+    grid-auto-rows:32vw; /*https://youtu.be/jV8B24rSN5o?t=713*/
+    /*grid-auto-rows:400px;*/
+  }
+
+  .grosse_nachricht_vertikal{
+    height:auto;/*resetting height value from 70vw to default value*/
+    grid-column:3;
+    grid-row:2/4;
+  }
+}

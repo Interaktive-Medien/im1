@@ -1,0 +1,3 @@
+viewport erwähnen
+
+Videotutorial erwähnen und wie man flex: 1, flex:2 usw benutzt
